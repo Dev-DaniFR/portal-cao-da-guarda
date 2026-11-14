@@ -1,3 +1,16 @@
 from django.contrib import admin
+from .models import Campaign, Event
 
-# Register your models here.
+
+@admin.register(Campaign)
+class CampaignAdmin(admin.ModelAdmin):
+    list_display = ('title', 'is_active', 'created_at')
+    list_filter = ('is_active',)
+    search_fields = ('title', 'description')
+
+
+@admin.register(Event)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ('title', 'date', 'location', 'is_active')
+    list_filter = ('is_active', 'date')
+    search_fields = ('title', 'description', 'location')

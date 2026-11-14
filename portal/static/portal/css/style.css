@@ -1,0 +1,151 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #142b45;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #e5c477;
+    font-size: 16px;
+}
+
+/* Menu de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e5c477;
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+main h2 {
+    color: #142b45;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+main p {
+    font-size: 17px;
+    color: #555555;
+}
+
+/* Rodapé */
+footer {
+    background-color: #142b45;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Seções da página */
+main section {
+    margin-bottom: 50px;
+}
+
+/* Cartões de campanhas e eventos */
+main article {
+    background-color: #ffffff;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+main article h3 {
+    color: #142b45;
+    margin-bottom: 10px;
+}
+
+main article p {
+    margin-bottom: 8px;
+}
+
+
+/* Adaptação para telas menores */
+@media (max-width: 600px) {
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 20px 15px;
+    }
+
+    main h2 {
+        font-size: 23px;
+    }
+
+    main article {
+        padding: 18px;
+    }
+}
+
+/* Links do rodapé */
+footer a {
+    color: #e5c477 !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
