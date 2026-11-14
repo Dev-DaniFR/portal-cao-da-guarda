@@ -1,0 +1,45 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Associação Cão da Guarda{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'portal/css/style.css' %}">
+</head>
+
+<body>
+
+<header>
+    <h1>Associação Cão da Guarda</h1>
+    <p>Proteção, cuidado e respeito aos animais.</p>
+
+    <nav>
+        <a href="{% url 'home' %}">Início</a>
+        <a href="{% url 'sobre' %}">Sobre</a>
+        <a href="{% url 'como_ajudar' %}">Como Ajudar</a>
+        <a href="{% url 'home' %}#campanhas">Campanhas</a>
+        <a href="{% url 'home' %}#eventos">Eventos</a>
+        <a href="{% url 'adocao' %}">Adoção</a>
+        <a href="{% url 'contato' %}">Contato</a>
+    </nav>
+</header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>Associação Cão da Guarda</p>
+        <p>
+        <a href="{% url 'contato' %}">Entre em contato</a>
+    </p>
+    </footer>
+
+</body>
+</html>

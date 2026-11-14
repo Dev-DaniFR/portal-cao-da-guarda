@@ -1,0 +1,46 @@
+
+{% extends 'portal/base.html' %}
+
+{% block title %}Início | Associação Cão da Guarda{% endblock %}
+
+{% block content %}
+
+    <section id="campanhas">
+        <h2>Bem-vindo ao nosso portal!</h2>
+
+        <p>
+            Conheça nosso trabalho, acompanhe campanhas e eventos
+            e descubra como ajudar a causa animal.
+        </p>
+    </section>
+
+    <section  id="eventos">
+        <h2>Nossas campanhas</h2>
+
+        {% for campaign in campaigns %}
+            <article>
+                <h3>{{ campaign.title }}</h3>
+                <p>{{ campaign.description }}</p>
+            </article>
+        {% empty %}
+            <p>No momento, não temos campanhas disponíveis.</p>
+        {% endfor %}
+    </section>
+
+    <section>
+        <h2>Próximos eventos</h2>
+
+        {% for event in events %}
+            <article>
+                <h3>{{ event.title }}</h3>
+                <p>{{ event.description }}</p>
+                <p>Data: {{ event.date|date:"d/m/Y" }}</p>
+                <p>Horário: {{ event.date|date:"H:i" }}</p>
+                <p>Local: {{ event.location }}</p>
+            </article>
+        {% empty %}
+            <p>No momento, não temos eventos disponíveis.</p>
+        {% endfor %}
+    </section>
+
+{% endblock %}
