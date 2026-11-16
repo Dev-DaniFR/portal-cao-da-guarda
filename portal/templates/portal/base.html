@@ -27,19 +27,27 @@
         <a href="{% url 'adocao' %}">Adoção</a>
         <a href="{% url 'contato' %}">Contato</a>
     </nav>
+
+    <div class="acessibilidade">
+    <button type="button" id="alternar-contraste" aria-pressed="false">
+        Alto contraste
+    </button>
+</div>
 </header>
 
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+<main id="conteudo-principal">
+    {% block content %}
+    {% endblock %}
+</main>
 
-    <footer>
-        <p>Associação Cão da Guarda</p>
-        <p>
+<footer>
+    <p>Associação Cão da Guarda</p>
+    <p>
         <a href="{% url 'contato' %}">Entre em contato</a>
     </p>
-    </footer>
+</footer>
+
+<script src="{% static 'portal/js/acessibilidade.js' %}"></script>
 
 </body>
 </html>
