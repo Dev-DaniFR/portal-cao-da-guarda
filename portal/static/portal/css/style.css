@@ -15,6 +15,7 @@ body {
 
 /* Cabeçalho */
 header {
+    position: relative;
     background-color: #142b45;
     color: #ffffff;
     text-align: center;
@@ -148,4 +149,188 @@ footer a {
 footer a:hover {
     color: #ffffff;
     text-decoration: underline;
+}
+
+
+/* Controles de acessibilidade */
+.acessibilidade {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.acessibilidade button {
+    padding: 6px 12px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.acessibilidade button:hover {
+    background-color: #eeeeee;
+}
+
+.acessibilidade button:focus-visible {
+    outline: 3px solid #ffd166;
+    outline-offset: 3px;
+}
+
+/* Modo de alto contraste */
+body.alto-contraste {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+body.alto-contraste header p,
+body.alto-contraste nav a,
+body.alto-contraste main h2,
+body.alto-contraste main p,
+body.alto-contraste main article h3,
+body.alto-contraste footer p {
+    color: #ffffff !important;
+}
+
+body.alto-contraste nav a:hover,
+body.alto-contraste footer a:hover {
+    color: #ffff00 !important;
+}
+
+body.alto-contraste main article {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: none;
+}
+
+body.alto-contraste a {
+    color: #ffff00 !important;
+}
+
+body.alto-contraste a:hover {
+    color: #ffffff !important;
+}
+
+body.alto-contraste .acessibilidade button {
+    background-color: #ffff00;
+    color: #000000;
+    border: 2px solid #ffffff;
+}
+
+body.alto-contraste .acessibilidade button:hover {
+    background-color: #ffffff;
+}
+
+body.alto-contraste a:focus-visible,
+body.alto-contraste button:focus-visible {
+    outline: 3px solid #ffff00;
+    outline-offset: 3px;
+}
+
+
+/* Página Sobre */
+.pagina-sobre section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 25px auto 35px;
+    border-radius: 10px;
+    border-left: 5px solid #e5c477;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    text-align: left;
+}
+
+.pagina-sobre h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.pagina-sobre p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.pagina-sobre h3 {
+    color: #142b45;
+    margin: 25px 0 15px;
+}
+
+.pagina-sobre ul {
+    margin: 15px 0 15px 25px;
+    line-height: 2;
+}
+
+.pagina-sobre li {
+    padding-left: 5px;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 600px) {
+    .pagina-sobre section {
+        padding: 20px;
+        margin: 20px auto;
+    }
+}
+
+/* Layout da página Sobre */
+.pagina-sobre section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 25px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.pagina-sobre h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pagina-sobre h3 {
+    color: #142b45;
+    margin: 25px 0 10px;
+}
+
+.pagina-sobre p {
+    margin-bottom: 15px;
+}
+
+.pagina-sobre ul {
+    margin: 10px 0 20px 25px;
+}
+
+.pagina-sobre li {
+    margin-bottom: 6px;
+}
+
+/* Mantém a página Sobre legível no alto contraste */
+body.alto-contraste .pagina-sobre section {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: none;
+}
+
+body.alto-contraste .pagina-sobre h3,
+body.alto-contraste .pagina-sobre p {
+    color: #ffffff;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    .pagina-sobre section {
+        padding: 20px;
+    }
 }
